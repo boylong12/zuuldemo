@@ -1,0 +1,11 @@
+server:
+  port: 9901
+zuul:
+  routes:
+    app-business:
+      path: /app/**
+      url: http://localhost:8080/
+    terminal-business:
+      serviceId: terminal
+      path: /terminal/**
+      url: http://localhost:9090/terminal/
